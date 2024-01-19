@@ -1,0 +1,25 @@
+'use client';
+import { Roboto } from 'next/font/google';
+import { createTheme } from '@mui/material/styles';
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['cyrillic', 'latin'],
+  display: 'swap',
+});
+
+const theme = createTheme({
+  typography: {
+    fontFamily: roboto.style.fontFamily,
+  },
+  components: {
+    MuiTextField: {
+      defaultProps: {
+        variant: 'outlined',
+        fullWidth: true,
+      }
+    }
+  }
+});
+
+export default theme;
