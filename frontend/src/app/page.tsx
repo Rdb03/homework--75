@@ -28,7 +28,6 @@ export default function Home() {
       };
     },
     onSuccess: (data) => {
-      console.log('API response:', data);
       setText({
         encode: data.decodeData,
         decode: data.encodeData,
